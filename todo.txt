@@ -1,0 +1,9 @@
+- Todolist
+
+-DONE Install and setup django 
+-DONE install and setup Vue
+-DONE Include font awesome 
+-DONE set up the base template
+-DONE create django app and models for products
+-DONE Create serializer and views for the products
+-Create simple front page (latest)
