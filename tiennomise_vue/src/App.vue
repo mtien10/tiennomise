@@ -34,7 +34,7 @@
       </section>
 
       <footer class="footer">
-        <p class="has-text-centered">Copyright (c) 2021</p>
+        <p class="has-text-centered">Copyright (c) 2022</p>
       </footer>
   </div>
 </template>

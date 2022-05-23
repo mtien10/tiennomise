@@ -6,4 +6,8 @@
 -DONE set up the base template
 -DONE create django app and models for products
 -DONE Create serializer and views for the products
--Create simple front page (latest)
+-DONE Create simple front page (latest)
+- View a products
+    -Create viewset in django
+    -Create vue page for showing products
+    -Add link to detail page 
