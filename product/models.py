@@ -27,7 +27,7 @@ class Category(models.Model):
 class Product(models.Model):
     category = models.ForeignKey(Category, related_name='products', on_delete=models.CASCADE)
     name = models.CharField(max_length=255)
-    Slug = models.SlugField()
+    slug = models.SlugField()
     description = models.TextField(blank=True, null=True)
     price = models.IntegerField(verbose_name="Đơn giá")
     image = models.ImageField(upload_to='uploads/', blank=True, null=True)
@@ -41,7 +41,7 @@ class Product(models.Model):
         return self.name
 
     def get_absolute_url(self):
-        return f'/{self.category.slug}/{self.Slug}/'
+        return f'/{self.category.slug}/{self.slug}/'
 
     def get_image(self):
         if self.image:
