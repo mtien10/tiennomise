@@ -39,26 +39,31 @@ export default {
     data() {
         return {
             product: {},
-            quantity: 1
+            quantity: 1,
+            isLoading: false
         }
     },
     mounted() {
         this.getProduct()
     },
     methods: {
-        getProduct() {
+        async getProduct() {
+            this.$store.commit('setIsLoading', true)
+
             const category_slug = this.$route.params.category_slug
             const product_slug = this.$route.params.product_slug
-            console.log('C', category_slug)
-            console.log('P', product_slug)
-            axios
+            await axios
                 .get(`/api/v1/products/${category_slug}/${product_slug}`)
                 .then(response => {
                     this.product = response.data
+
+                    document.title = this.product.name + '| Dulcie'
                 })
                 .catch(error => {
                     console.log(error)
                 })
+
+            this.$store.commit('setIsLoading', false)
 
         },
         addToCart() {

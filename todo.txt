@@ -1,5 +1,4 @@
 - Todolist
-
 -DONE Install and setup django 
 -DONE install and setup Vue
 -DONE Include font awesome 
@@ -17,3 +16,4 @@
     -Initialize store in app.vue
     -Add button to product page
     -Show a toast message
+- DONE Implement a loading bar
