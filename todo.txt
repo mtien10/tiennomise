@@ -17,3 +17,6 @@
     -Add button to product page
     -Show a toast message
 - DONE Implement a loading bar
+- DONE Set documents title
+- Make it possible to views a category 
+    -   Convert the product to a component 
