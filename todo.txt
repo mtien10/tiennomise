@@ -20,3 +20,5 @@
 - DONE Set documents title
 -DONE Make it possible to views a category 
     -DONE   Convert the product to a component 
+-View cart 
+    -A cart item should be a component
