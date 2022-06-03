@@ -32,7 +32,7 @@
             <div class="column is-12 box">
                 <h2 class="subtitle">Summary</h2>
 
-                <strong>{{ cartTotalPrice.toFixed(2) }}đ</strong>, {{ cartTotalLength }} items
+                <strong>{{ cartTotalPrice.toFixed(0) }} đ</strong>, {{ cartTotalLength }} items
 
                 <hr>
 
@@ -60,6 +60,11 @@ export default {
     },
     mounted() {
         this.cart = this.$store.state.cart
+    },
+    methods: {
+        removeFromCart(item) {
+            this.cart.items = this.cart.items.filter(i => i.product.id !== item.product.id)
+        }
     },
     computed: {
         cartTotalLength() {
